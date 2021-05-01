@@ -6,15 +6,16 @@ body{
     background-image: url("./img/bg.jpg");
     background-repeat: repeat;
 }
-/*header css*/
+/*header*/
 header{
     background-color: rgba(255, 255, 255, 0.8);
     width: 80%;
     margin: 0 auto;
 }
 header > nav{
+    width: 100%;
     display: grid;
-    grid-template-columns: 5fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
 }
 header > nav > button:first-of-type{
     grid-column: 2/3;
@@ -50,7 +51,7 @@ header > nav > button:hover > a{
     text-shadow: 1px 1px 1px black;
 }
 
-/*main css*/
+/*main*/
 main{
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -133,8 +134,28 @@ footer{
     }
 }
 
+@media screen and (max-width: 1070px) {
+    header > nav{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    header > nav > button:first-of-type{
+        grid-column: 1/2;
+    }
+}
+
+
+
 @media screen and (max-width: 600px)  {
     main{
         width: 100%;
+    }
+    footer{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    header > nav{
+        grid-template-columns: 1fr;
     }
 }
