@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/jpg" href="./img/favicon.ico" />
+    <title>Gamers' Couch - Főoldal</title>
+</head>
+
+<body>
+    <a href="#jump" id="out">Ugrás a tartalomra</a>
+    <header>
+        <nav>
+            <a href="index.html">Főoldal</a>
+            <a href="gamelist.html">Már értékelt játékok</a>
+            <a class="here" href="#">Játékjavaslat</a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Javasolnál játékot tesztre? Az alábbi űrlap kitöltésével ezt megteheted!</h2>
+            <br>
+            <br>
+            <br>
+            <form action="mailto:b39ezp@inf.elte.hu" method="POST" enctype="text/plain">
+                <label for="gamename" class="question">Játék neve:</label><br>
+                <input type="text" id="gamename" name="gamename"><br>
+                <label for="gametype" class="question">Játék típusa (rpg, fps,...):</label><br>
+                <input type="text" id="gametype" name="gametype"><br><br>
+                <label class="question">Ingyenes-e a játék?</label><br>
+                <input type="radio" id="free" name="isfree" value="free">
+                <label>Igen</label><br>
+                <input type="radio" id="notfree" name="isfree" value="notfree">
+                <label for="notfree">Nem</label><br><br>
+                <label class="question">A játék játszható...</label><br>
+                <input type="checkbox" id="option1" name="option1" value="pc">
+                <label>...PC-n.</label><br>
+                <input type="checkbox" id="option2" name="option2" value="konzol">
+                <label>...konzolon.</label><br>
+                <input type="checkbox" id="option3" name="option3" value="phone">
+                <label>...iOS-en/Androidon.</label><br><br>
+
+                <input type="reset" value="Törlés">
+                <input type="submit" value="Küldés">
+            </form>
+        </div>
+    </main>
+    <footer>
+        A project github linkje: <a
+            href="https://github.com/FiR3bL4z3/gamers_couch">https://github.com/FiR3bL4z3/gamers_couch</a>
+    </footer>
+</body>
+
+</html>

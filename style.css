@@ -6,7 +6,13 @@ body{
     background-image: url("./img/bg.jpg");
     background-repeat: repeat;
 }
+/*index.html*/
 /*header*/
+#out{
+    position: absolute;
+    left: 9999px;
+}
+
 header, .header{
     background-color: rgba(255, 255, 255, 0.8);
     width: 80%;
@@ -16,40 +22,42 @@ header > nav, .header > .nav{
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
+    text-align: center;
 }
-header > nav > button:first-of-type, .header > .nav > button:first-of-type{
+
+header > nav > a:first-of-type, .header > .nav > a:first-of-type{
     grid-column: 2/3;
 }
-header > nav > button, .header > .nav > button{
+header > nav > a, .header > .nav > a{
     border: none;
     background-color: inherit;
     padding: 1em;
-    transition: background-color 1s;
-}
-header > nav > button > a, .header > .nav > button > a{
     text-decoration: none;
     color: black;
-    transition: color 1s;
+    font-weight: bold;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
 }
-header > nav > button > a:hover, .header > .nav > button > a:hover{
-    text-decoration: none;
-    color: black;
-}
-header > nav > button > a:visited, .header > .nav > button > a:visited{
+header > nav > a:hover, .header > .nav > a:hover{
     text-decoration: none;
     color: black;
 }
-header > nav > button > a:active, .header > .nav > button > a:active{
+header > nav > a:visited, .header > .nav > a:visited{
     text-decoration: none;
     color: black;
 }
-header > nav > button:hover, .header > .nav > button:hover{
+header > nav > a:active, .header > .nav > a:active{
+    text-decoration: none;
+    color: black;
+}
+header > nav > a:hover, .header > .nav > a:hover{
     background-color: #70DCFA;
 }
-header > nav > button:hover > a, .header > .nav > button:hover > a{
-    color: white;
-    text-shadow: 1px 1px 1px black;
+
+header > nav > a.here, .header > .nav > a.here{
+    background-color: #70DCFA;
 }
+
 
 /*main*/
 main, .main{
@@ -122,7 +130,7 @@ main > div.top-games > table.small-table{
     display: none;
 }
 /*footer*/
-footer{
+footer, .footer{
     width: 80%;
     background-color: rgba(255, 255, 255, 0.8);
     margin: 0 auto;
@@ -130,55 +138,9 @@ footer{
     padding: 1em;
     box-sizing: border-box;
 }
-footer > a:active, footer > a:visited, footer > a:hover, footer > a:link{
+footer > a:active, footer > a:visited, footer > a:hover, footer > a:link, .footer > a:active, .footer > a:visited, .footer > a:hover, .footer > a:link{
     color: inherit;
     text-decoration: none;
-}
-
-/*responivity*/
-@media screen and (max-width: 900px)  {
-    main > div.best-game-image{
-        grid-column: 1/3;
-    }
-    main > div.top-games{
-        grid-column: 1/3;
-    }
-    main{
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 1070px) {
-    header > nav{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    header > nav > button:first-of-type{
-        grid-column: 1/2;
-    }
-}
-
-@media screen and (max-width: 600px)  {
-    main{
-        width: 100%;
-    }
-    footer{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-    }
-    header > nav{
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    main > div.top-games > table.big-table{
-        display: none;
-    }
-    main > div.top-games > table.small-table{
-        display: inline-table;
-    }
 }
 
 /*onegame.html*/
@@ -198,28 +160,6 @@ main > div.about, main > div.opinion{
     text-align: justify;
 }
 
-@media screen and (max-width: 1200px) {
-    
-    main > div{
-        grid-column: 1/3;
-    } 
-}
-
-@media screen and (max-width: 1400px) {
-    main > div.about{
-        grid-column: 1/3;
-    }
-    main > div.opinion{
-        grid-column: 1/3;
-    } 
-}
-
-@media screen and (max-width: 750px) {
-    main > div.pros_cons-wrapper > div{
-        grid-column: 1/3;
-    }
-}
-
 /*gamelist.html*/
 /*table*/
 .main > table{
@@ -230,6 +170,7 @@ main > div.about, main > div.opinion{
     border: 1px solid #555; 
     text-align: center;
     grid-column: 1/3;
+    margin-top: 2em;
 }
 
 .main > table tr td{
@@ -247,4 +188,119 @@ main > div.about, main > div.opinion{
 .main table tr th{
     border: 1px solid #444; 
     padding: 1em 0;
+}
+.main > table.small-table{
+    display: none;
+}
+.main > table a{
+    text-decoration: none;
+    color: black;
+}
+
+/*formpage.html*/
+/*form*/
+.form-container{
+    grid-column: 1/4;
+    text-align: center;
+}
+.form-container > form > input{
+    margin-bottom: 1em;
+}
+
+.form-container > form > input[type=submit]{
+    background-color: #70DCFA;
+    font-weight: bold;
+    border: 1px black solid;
+    padding: 0.3em;
+    font-size: 1.2em;
+}
+
+.form-container > form > input[type=reset]{
+    background-color: red;
+    color:white;
+    font-weight: bold;
+    border: 1px black solid;
+    padding: 0.3em;
+    font-size: 1.2em;
+}
+
+.form-container > form > input[type=text]{
+    padding: 0.5em;
+}
+.form-container > form > label.question{
+    font-size: 1.2em;
+}
+
+/*responivity*/
+@media screen and (max-width: 1400px) {
+    main > div.about{
+        grid-column: 1/3;
+    }
+    main > div.opinion{
+        grid-column: 1/3;
+    } 
+}
+
+@media screen and (max-width: 1310px) {
+    header > nav, .header > .nav{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    header > nav > a:first-of-type, .header > .nav > a:first-of-type{
+        grid-column: 1/2;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    main > div{
+        grid-column: 1/3;
+    } 
+}
+
+@media screen and (max-width: 900px)  {
+    main > div.best-game-image{
+        grid-column: 1/3;
+    }
+    main > div.top-games{
+        grid-column: 1/3;
+    }
+    main, .main{
+        width: 80%;
+    }
+    .main > table.big-table{
+        display: none;
+    }
+    .main > table.small-table{
+        display: inline-table;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    main > div.pros_cons-wrapper > div{
+        grid-column: 1/3;
+    }
+}
+
+@media screen and (max-width: 652px)  {
+    main, .main{
+        width: 100%;
+    }
+    footer, .footer{
+        width: 100%;
+    }
+    header, .header{
+        width: 100%;
+    }
+    header > nav, .header > .nav{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main > div.top-games > table.big-table{
+        display: none;
+    }
+    main > div.top-games > table.small-table{
+        display: inline-table;
+    }
 }
