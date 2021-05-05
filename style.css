@@ -254,13 +254,25 @@ main > .about, main > .opinion{
     width: 90%;
     padding: 0.5em;
 }
+.form-container > a{
+    color: black;
+}
+.form-container > a:visited{
+    color: #555;
+}
 
 /*video.html*/
 .videotext{
     grid-column: 1/3;
     padding: 1em;
+    text-align: justify;
 }
-
+.videotext > a{
+    color: black;
+}
+.videotext > a:visited{
+    color: #555;
+}
 
 /*responivity*/
 @media screen and (max-width: 1400px) {
@@ -333,5 +345,8 @@ main > .about, main > .opinion{
     }
     main > .top-games > table.small-table{
         display: inline-table;
+    }
+    footer a{
+        word-break: break-all;
     }
 }
