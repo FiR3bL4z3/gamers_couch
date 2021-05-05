@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link id="bigfont" rel="stylesheet" href="bigfont.css" media="not all">
+    <link rel="stylesheet" href="print.css" media="print">
     <link rel="shortcut icon" type="image/jpg" href="./img/favicon.ico" />
-    <title>Gamers' Couch - Egy játék tesztje</title>
+    <title>Gamer's Couch - Egy játék tesztje</title>
+    <script src="./script/script.js"></script>
 </head>
 
 <body>
@@ -21,13 +24,26 @@
     </header>
     <main>
         <div class="main-title">
-            <h1>Minecraft</h1>
+            <a onclick="change()" href="#">Betűméret változtatása</a>
+            <h1><a href="https://minecraft.net" target="_blank">Minecraft</a></h1>
             <h2>Értékelés: 9.3/10</h2>
         </div>
+        <div class="important-data">
+            <h2>Adatlap</h2>
+            <ul>
+                <li>Megjelenés éve: 2011</li>
+                <li>Ingyenes-e? : Nem</li>
+                <li>Fejlesztő: Mojang Studios</li>
+                <li>Platform: Windows, macOS, Linux, Android, iOS, Playstation, Xbox, Nintendo</li>
+                <li>Műfaj: túlélő, sandbox</li>
+                <li>Korhatár: PEGI 7</li>
+            </ul>
+        </div>
         <div class="game-video">
-            <video controls poster="./img/mc.jpg">
+            <video controls poster="./img/poster.png">
                 <source src="./vid/minecraft_trailer.mp4" type="video/mp4">
             </video>
+            <a href="./video.html">A videó leírása elérhető ezen a linken.</a>
         </div>
         <div class="pros_cons-wrapper">
             <div class="pros">
@@ -46,30 +62,35 @@
                 </ul>
             </div>
         </div>
-        <div class="about">
+        <article class="about">
             <h2>A játékról:</h2>
-            <p>A Minecraft nyílt világú sandbox videójáték, melyet a svéd Markus Persson indított útjára 2009-ben, és a
-                Mojang adott ki 2011-ben. 2014-ben a Microsoft felvásárolta a játék fejlesztésével és kiadásával
-                foglalkozó céget, ezzel együtt birtokukba került a Minecraft tulajdonjoga is. A Minecraft minden idők
-                legkelendőbb játéka. 2020 májusára 200 millió példányt adtak el belőle valamennyi platformon, továbbá
+            <p>A <b>Minecraft nyílt világú sandbox</b> videójáték, melyet a svéd <b>Markus Persson</b>
+                indított útjára
+                2009-ben, és a
+                <b>Mojang</b> adott ki 2011-ben. 2014-ben a Microsoft felvásárolta a játék fejlesztésével és kiadásával
+                foglalkozó céget, ezzel együtt birtokukba került a Minecraft tulajdonjoga is. A Minecraft <b>minden idők
+                    legkelendőbb játéka</b>. 2020 májusára 200 millió példányt adtak el belőle valamennyi platformon,
+                továbbá
                 havi szinten 126 millió aktív játékossal rendelkezik.
                 <br>
-                A Minecraftban a játékosok egy blokkokból álló, pixeles, 3D világot fedezhetnek fel, felhasználhatják
+                A Minecraftban a játékosok egy blokkokból álló, pixeles, <b>3D</b> világot fedezhetnek fel,
+                felhasználhatják
                 annak a nyersanyagait, eszközöket készíthetnek, építményeket építhetnek, továbbá a játék módjától
                 függően harcolhatnak számítógép vezérelte ellenségekkel, vagy akár együttműködhetnek más játékosokkal. A
                 játék több módban is játszható: a gyűjtögetésre, barkácsolásra és harcokra fókuszáló túlélő és a
                 végtelen forrással rendelkező kreatív, vagy szemlélő módban. A Java alapú kiadásban különböző modokkal
                 új játékmechanikával, tárgyakkal és grafikával lehet kiegészíteni a játékot.
             </p>
-        </div>
-        <div class="opinion">
+        </article>
+        <article class="opinion">
             <h2>Véleményünk:</h2>
             <p>A Minecraft az egyik legjobb játék, nem véletlenül szerepel előkelő helyen a világ legjátszottabb
-                játékainak listáján. A véletlenszerű világgenerálás által minden egyes alkalommal képes valami újat
+                játékainak listáján. A <b>véletlenszerű világgenerálás</b> által minden egyes alkalommal képes valami
+                újat
                 nyújtani a játék és aki nem sajnálja az időt annak a különböző modokkal felturbózott játék gyakorlatilag
                 végtelen szórakozást tud nyújtani.
             </p>
-        </div>
+        </article>
     </main>
     <footer>
         A project github linkje: <a

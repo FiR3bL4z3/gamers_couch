@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="print.css" media="print">
     <link rel="shortcut icon" type="image/jpg" href="./img/favicon.ico" />
-    <title>Gamers' Couch - Főoldal</title>
+    <title>Gamer's Couch - Főoldal</title>
 </head>
 
 <body>
@@ -24,20 +25,24 @@
             <figure>
                 <img src="./img/logo.png" alt="logó">
             </figure>
-            <h1>Gamer's Couch</h1>
+            <h1 lang="en">Gamer's Couch</h1>
             <h2>PC és konzoljátéktesztek</h2>
         </div>
 
-        <div class="welcome-text">
-            <h3>Üdvözlünk a Gamers’ Couch oldalán.</h3>
+        <article class="welcome-text">
+            <h3>Üdvözlünk a <span lang="en">Gamer’s Couch</span> oldalán.</h3>
             <p>Csapatunk azzal tölti napjait, hogy részletes teszteket készítsen új és régi videójátékokról. Eleinte
-                csak indie játékok tesztelésével foglalkoztunk, de mára az egész gamer világot lefedjük. Konzolon és
+                csak <b>indie játékok</b> tesztelésével foglalkoztunk, de mára az egész gamer világot lefedjük. Konzolon
+                és
                 PC-n elérhető címekkel egyaránt foglalkozunk. Ha érdekel milyennek ítéltünk egy adott játékot akkor a
-                “Már értékelt játékok” menüpontra kattintva megnézheted, hogy nekünk mi volt a véleményünk a választott
+                <b>“Már értékelt játékok”</b> menüpontra kattintva megnézheted, hogy nekünk mi volt a véleményünk a
+                választott
                 alkotásról. Ha az a ritka eset állna fent, hogy nem találod a játékot amit keresel, akkor javasolhatod
-                tesztre a “Játékjavaslat” menüpontra kattintva. Igyekszünk a beérkező javaslatokat minnél hamarabb
-                áttekinteni. :)</p>
-        </div>
+                tesztre a <b>“Játékjavaslat”</b> menüpontra kattintva. Igyekszünk a beérkező javaslatokat minnél
+                hamarabb
+                áttekinteni.
+            </p>
+        </article>
 
         <div class="best-game-image">
             <figure>
@@ -46,9 +51,14 @@
             </figure>
         </div>
 
-        <div class="top-games">
+        <aside class="top-games">
             <table class="big-table">
-                <caption>Jelenlegi toplistánk</caption>
+                <caption>
+                    <details>
+                        <summary>Jelenlegi toplistánk</summary>
+                        Az táblázat a legjobb értékelést kapott játékokat tartalmazza.
+                    </details>
+                </caption>
                 <tr>
                     <th>Helyezés</th>
                     <th>Név</th>
@@ -57,31 +67,32 @@
                 </tr>
                 <tr>
                     <td>1.</td>
-                    <td>Minecraft</td>
+                    <td><a href="https://minecraft.net" target="_blank">Minecraft</a></td>
                     <td>9.7/10</td>
                     <td>Nem</td>
                 </tr>
                 <tr>
                     <td>2.</td>
-                    <td>Among Us</td>
+                    <td><a href="https://innersloth.com/gameAmongUs.php" target="_blank">Among Us</a></td>
                     <td>8.7/10</td>
                     <td>Nem</td>
                 </tr>
                 <tr>
                     <td>3.</td>
-                    <td>League of Legends</td>
+                    <td><a href="https://eune.leagueoflegends.com/en-pl/" target="_blank">League of Legends</a></td>
                     <td>8.3/10</td>
                     <td>Igen</td>
                 </tr>
                 <tr>
                     <td>4.</td>
-                    <td>Hearthstone</td>
+                    <td><a href="https://playhearthstone.com/en-gb" target="_blank">Hearthstone</a></td>
                     <td>8.2/10</td>
                     <td>Igen</td>
                 </tr>
                 <tr>
                     <td>5.</td>
-                    <td>World War Z</td>
+                    <td><a href="https://www.epicgames.com/store/en-US/p/world-war-z" target="_blank">World War Z</a>
+                    </td>
                     <td>7.9/10</td>
                     <td>Nem</td>
                 </tr>
@@ -89,7 +100,12 @@
             </table>
 
             <table class="small-table">
-                <caption>Jelenlegi toplistánk</caption>
+                <caption>
+                    <details>
+                        <summary>Jelenlegi toplistánk</summary>
+                        Az táblázat a legjobb értékelést kapott játékokat tartalmazza.
+                    </details>
+                </caption>
                 <tr>
                     <th>Helyezés</th>
                     <th>Név</th>
@@ -97,32 +113,33 @@
                 </tr>
                 <tr>
                     <td>1.</td>
-                    <td>Minecraft</td>
+                    <td><a href="https://minecraft.net" target="_blank">Minecraft</a></td>
                     <td>9.7/10</td>
                 </tr>
                 <tr>
                     <td>2.</td>
-                    <td>Among Us</td>
+                    <td><a href="https://innersloth.com/gameAmongUs.php" target="_blank">Among Us</a></td>
                     <td>8.7/10</td>
                 </tr>
                 <tr>
                     <td>3.</td>
-                    <td>League of Legends</td>
+                    <td><a href="https://eune.leagueoflegends.com/en-pl/" target="_blank">League of Legends</a></td>
                     <td>8.3/10</td>
                 </tr>
                 <tr>
                     <td>4.</td>
-                    <td>Hearthstone</td>
+                    <td><a href="https://playhearthstone.com/en-gb" target="_blank">Hearthstone</a></td>
                     <td>8.2/10</td>
                 </tr>
                 <tr>
                     <td>5.</td>
-                    <td>World War Z</td>
+                    <td><a href="https://www.epicgames.com/store/en-US/p/world-war-z" target="_blank">World War Z</a>
+                    </td>
                     <td>7.9/10</td>
                 </tr>
 
             </table>
-        </div>
+        </aside>
     </main>
     <footer>
         A project github linkje: <a

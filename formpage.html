@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="print.css" media="print">
     <link rel="shortcut icon" type="image/jpg" href="./img/favicon.ico" />
-    <title>Gamers' Couch - Főoldal</title>
+    <title>Gamer's Couch - Játékjavaslat</title>
 </head>
 
 <body>
@@ -20,33 +21,36 @@
         </nav>
     </header>
     <main>
-        <div class="form-container">
-            <h2>Javasolnál játékot tesztre? Az alábbi űrlap kitöltésével ezt megteheted!</h2>
+        <section class="form-container">
             <br>
+            <h1>Javasolnál játékot tesztre? Az alábbi űrlap kitöltésével ezt megteheted!</h1>
             <br>
             <br>
             <form action="mailto:b39ezp@inf.elte.hu" method="POST" enctype="text/plain">
                 <label for="gamename" class="question">Játék neve:</label><br>
-                <input type="text" id="gamename" name="gamename"><br>
+                <input type="text" id="gamename" name="gamename" required maxlength="30"><br>
                 <label for="gametype" class="question">Játék típusa (rpg, fps,...):</label><br>
-                <input type="text" id="gametype" name="gametype"><br><br>
+                <input type="text" id="gametype" name="gametype" maxlength=20><br><br>
                 <label class="question">Ingyenes-e a játék?</label><br>
-                <input type="radio" id="free" name="isfree" value="free">
-                <label>Igen</label><br>
+                <input type="radio" id="free" name="isfree" value="free" checked>
+                <label for="free">Igen</label><br>
                 <input type="radio" id="notfree" name="isfree" value="notfree">
                 <label for="notfree">Nem</label><br><br>
                 <label class="question">A játék játszható...</label><br>
                 <input type="checkbox" id="option1" name="option1" value="pc">
-                <label>...PC-n.</label><br>
+                <label for="option1">...PC-n.</label><br>
                 <input type="checkbox" id="option2" name="option2" value="konzol">
-                <label>...konzolon.</label><br>
+                <label for="option2">...konzolon.</label><br>
                 <input type="checkbox" id="option3" name="option3" value="phone">
-                <label>...iOS-en/Androidon.</label><br><br>
+                <label for="option3">...iOS-en/Androidon.</label><br><br>
+                <label class="question" for="bigtext">Miért gondolod, hogy érdemes lenne tesztelnünk ezt a
+                    játékot?</label><br>
+                <textarea rows="10" id="bigtext" maxlength="200"></textarea><br>
 
                 <input type="reset" value="Törlés">
                 <input type="submit" value="Küldés">
             </form>
-        </div>
+        </section>
     </main>
     <footer>
         A project github linkje: <a

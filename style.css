@@ -10,11 +10,11 @@ body{
 /*header*/
 #out{
     position: absolute;
-    left: 9999px;
+    left: -9999px;
 }
 
 header, .header{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(182, 182, 182, 0.95);
     width: 80%;
     margin: 0 auto;
 }
@@ -39,19 +39,9 @@ header > nav > a, .header > .nav > a{
     transition: background-color 0.5s;
 }
 header > nav > a:hover, .header > .nav > a:hover{
-    text-decoration: none;
-    color: black;
-}
-header > nav > a:visited, .header > .nav > a:visited{
-    text-decoration: none;
-    color: black;
-}
-header > nav > a:active, .header > .nav > a:active{
-    text-decoration: none;
-    color: black;
-}
-header > nav > a:hover, .header > .nav > a:hover{
     background-color: #70DCFA;
+    text-decoration: none;
+    color: black;
 }
 
 header > nav > a.here, .header > .nav > a.here{
@@ -67,7 +57,6 @@ main, .main{
     width: 80%;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.8);
-    text-shadow: 0.5px 0.5px 0.5px grey;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 main > div{
@@ -90,7 +79,6 @@ main > div.best-game-image > figure > figcaption{
     text-align: center;
     padding:1em;
     font-weight: bold;
-    text-shadow: none;
 }
 
 main > div.main-title{
@@ -98,12 +86,13 @@ main > div.main-title{
     text-align: center;
 }
 
-main > div.welcome-text{
+main > .welcome-text{
     grid-column: 1/3;
     text-align: justify;
+    padding: 1em;
 }
 
-main > div.top-games > table{
+main > .top-games > table{
     width: 100%;
     background-color: #70DCFA;
     border-collapse: collapse;
@@ -112,22 +101,28 @@ main > div.top-games > table{
     text-align: center;
 }
 
-main > div.top-games > table tr td{
+main > .top-games > table tr td{
     border: 1px solid #444;
 }
 
-main > div.top-games > table > caption{
-    text-shadow: none;
+main > .top-games > table > caption{
     margin-bottom: 1em;
     font-size: 1.5em;
 }
 
-main > div.top-games > table tr th{
+main > .top-games > table tr th{
     border: 1px solid #444; 
 }
 
-main > div.top-games > table.small-table{
+main > .top-games > table.small-table{
     display: none;
+}
+main > .top-games > table a{
+    color: black;
+    text-decoration: underline;
+}
+main > .top-games > table a:visited{
+    color: #555;
 }
 /*footer*/
 footer, .footer{
@@ -138,13 +133,34 @@ footer, .footer{
     padding: 1em;
     box-sizing: border-box;
 }
-footer > a:active, footer > a:visited, footer > a:hover, footer > a:link, .footer > a:active, .footer > a:visited, .footer > a:hover, .footer > a:link{
-    color: inherit;
-    text-decoration: none;
+footer > a, .footer > a{
+    color: black;
+}
+footer > a:visited, .footer > a:visited{
+    color: #555;
 }
 
 /*onegame.html*/
 /*main*/
+main > div.important-data{
+    grid-column: 1/3;
+    
+}
+main > div.game-video a{
+    color: black;
+}
+main > div.game-video a:visited{
+    color: #555;
+}
+main > div.main-title a{
+    color: black;
+}
+main > div.main-title a:visited{
+    color: #555;
+}
+main > div.important-data ul{
+    padding: 1em;
+}
 main > div.pros_cons-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -156,8 +172,9 @@ main > div.game-video video{
     width:100%;
     height: auto;
 }
-main > div.about, main > div.opinion{
+main > .about, main > .opinion{
     text-align: justify;
+    padding: 1em;
 }
 
 /*gamelist.html*/
@@ -178,8 +195,7 @@ main > div.about, main > div.opinion{
     padding: 1em 0;
 }
 
-.main > table > caption{
-    text-shadow: none;
+.main > table caption{
     margin-bottom: 1em;
     font-size: 1.5em;
     
@@ -193,8 +209,10 @@ main > div.about, main > div.opinion{
     display: none;
 }
 .main > table a{
-    text-decoration: none;
     color: black;
+}
+.main > table a:visited{
+    color: #555;
 }
 
 /*formpage.html*/
@@ -226,17 +244,30 @@ main > div.about, main > div.opinion{
 
 .form-container > form > input[type=text]{
     padding: 0.5em;
+    width:50%;
 }
 .form-container > form > label.question{
     font-size: 1.2em;
 }
 
+.form-container > form > textarea{
+    width: 90%;
+    padding: 0.5em;
+}
+
+/*video.html*/
+.videotext{
+    grid-column: 1/3;
+    padding: 1em;
+}
+
+
 /*responivity*/
 @media screen and (max-width: 1400px) {
-    main > div.about{
+    main > .about{
         grid-column: 1/3;
     }
-    main > div.opinion{
+    main > .opinion{
         grid-column: 1/3;
     } 
 }
@@ -261,7 +292,7 @@ main > div.about, main > div.opinion{
     main > div.best-game-image{
         grid-column: 1/3;
     }
-    main > div.top-games{
+    main > .top-games{
         grid-column: 1/3;
     }
     main, .main{
@@ -297,10 +328,10 @@ main > div.about, main > div.opinion{
 }
 
 @media screen and (max-width: 480px) {
-    main > div.top-games > table.big-table{
+    main > .top-games > table.big-table{
         display: none;
     }
-    main > div.top-games > table.small-table{
+    main > .top-games > table.small-table{
         display: inline-table;
     }
 }
